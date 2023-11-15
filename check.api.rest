@@ -1,0 +1,3 @@
+# GET
+
+https://uggeoapis.ablestate.co/api/v1/regions
