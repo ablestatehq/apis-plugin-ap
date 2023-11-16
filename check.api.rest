@@ -1,3 +1,9 @@
-# GET
+### get the regions
 
-https://uggeoapis.ablestate.co/api/v1/regions
+GET https://uggeoapis.ablestate.co/api/v1/regions
+
+### get the districts
+GET https://uggeoapis.ablestate.co/api/v1/districts
+
+### get the villages
+GET  https://uggeoapis.ablestate.co/api/v1/villages
