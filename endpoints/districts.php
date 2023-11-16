@@ -23,7 +23,7 @@
             'districts' => $the_districts,
             'total' => count($districts),
         ], 200 );
-        return new WP_REST_Response( 'Your response districts', 200 );
+
     }
 
     function add_districts_endpoint() {

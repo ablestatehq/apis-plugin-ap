@@ -37,3 +37,4 @@
 
     require_once $plugin_dir . "/endpoints/regions.php";
     require_once $plugin_dir . "/endpoints/districts.php";
+    require_once $plugin_dir . "/endpoints/villages.php";
