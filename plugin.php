@@ -3,7 +3,7 @@
      * Plugin Name: UG GEO APIS
      * Description: Access resourceful data from this open api to ease the development of your next project
      * version: 0.0.1
-     * tags: Regions, Districts, Counties, Sub counties, Parish, Sub Parishes, Villages
+     * tags: Regions, Districts, Counties, Sub counties, Parish, Sub Parishes, Villages, words, tourist attractions, tribes, languages
      * Plugin URI: https://ugopenapis.com
     */
 
@@ -38,3 +38,4 @@
     require_once $plugin_dir . "/endpoints/regions.php";
     require_once $plugin_dir . "/endpoints/districts.php";
     require_once $plugin_dir . "/endpoints/villages.php";
+    require_once $plugin_dir . "/endpoints/words.php";
