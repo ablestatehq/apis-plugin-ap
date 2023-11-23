@@ -13,6 +13,7 @@
         $the_words = array();
 
         foreach( $words as $word) {
+
             $native_language_description = get_post_meta($word->ID, 'native_language_description',true);
             $english_description = get_post_meta($word->ID, 'english_description',true);
             $english_translation = get_post_meta($word->ID, 'english',true);
@@ -30,7 +31,7 @@
             $the_words[] = array(
                 'id' => $word->ID,
                 'name' => $word->post_title,
-                'native_language_description' => $native_language_description,
+                'native_description' => $native_language_description,
                 'english_description' => $english_description,
                 'english_translation' => $english_translation,
                 'type' => $type,
@@ -58,7 +59,7 @@
         register_rest_route( 'v1', '/words/', array(
             'methods'  => 'GET',
             'callback' => 'words_endpoint_data',
-        ) );
+        ));
     }
 
     add_action( 'rest_api_init',  'add_words_endpoint');

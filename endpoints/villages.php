@@ -12,7 +12,7 @@
         $the_villages = array();
 
         foreach( $villages as $village) {
-            $region = get_post_meta( $village->ID, 'region',true);
+            $region_id= get_post_meta( $village->ID, 'region',true)[0];
             $district = get_post_meta( $village->ID, 'district',true);
             $county = get_post_meta( $village->ID, 'county',true);
             $sub_county = get_post_meta( $village->ID, 'sub_county',true);
@@ -20,10 +20,14 @@
             $sub_parish = get_post_meta( $village->ID, 'sub_parish',true);
             $sub_parish_post = get_post( $sub_parish );
             $sub_parish_name = $sub_parish_post->post_title;
+
             $the_villages[] = array(
                 'id' => $village->ID,
                 'name' => $village->post_title,
-                'region' => $region,
+                'region' => (object)[
+                    'id' => $region_id,
+                    'name' => get_the_title($region_id)
+                ],
                 'district' => $district,
                 'county' => $county,
                 'sub_county' => $sub_county,
