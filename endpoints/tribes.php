@@ -14,21 +14,15 @@
 
         foreach( $tribes as $tribe) {
             $region_id = (int)get_post_meta( $tribe->ID, 'origin_region', true )[0];
-
-            if( $region_id ) {
-                $region_post = get_post( $region_id );
-                $region_name = $region_post->post_title;
-
-            }
+            $region_name = get_the_title( $region_id );
 
             $the_tribes[] = array(
                 'id' => $tribe->ID,
                 'name' => $tribe->post_title,
-                'origin-region' => $region_id ? (object) [
-                    'id' => $region_id,
-                    'name' => $region_name,
+                'origin-region' => (object) [
+                    'id' => $region_id > 0 ? $region_id : null,
+                    'name' => !empty($region_name) ? $region_name : "",
                 ]
-                : null,
             );
         }
 
