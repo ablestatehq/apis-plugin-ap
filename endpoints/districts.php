@@ -7,14 +7,22 @@
             'post_status' => 'publish',
             'orderby' => 'title',
         );
+
         $districts = get_posts( $args );
 
         $the_districts = array();
 
         foreach( $districts as $district) {
+            $region_id = (int)get_post_meta( $district->ID, 'region', true )[0];
+            $region_name = get_the_title( $region_id );
+
             $the_districts[] = array(
                 'id' => $district->ID,
                 'name' => $district->post_title,
+                'region' => (object) array(
+                    'id' => $region_id > 0 ? $region_id : null,
+                    'name' => !empty($region_name) ? $region_name : "",
+                )
             );
         }
 
