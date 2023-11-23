@@ -43,4 +43,5 @@
     require_once $plugin_dir . "/endpoints/counties.php";
     require_once $plugin_dir . "/endpoints/sub-counties.php";
     require_once $plugin_dir . "/endpoints/parishes.php";
+    require_once $plugin_dir . "/endpoints/sub-parishes.php";
     require_once $plugin_dir . "/endpoints/words.php";
