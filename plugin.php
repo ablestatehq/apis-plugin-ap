@@ -41,3 +41,4 @@
     require_once $plugin_dir . "/endpoints/words.php";
     require_once $plugin_dir . "/endpoints/languages.php";
     require_once $plugin_dir . "/endpoints/tribes.php";
+    require_once $plugin_dir . "/endpoints/counties.php";

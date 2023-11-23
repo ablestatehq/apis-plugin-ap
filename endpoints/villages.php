@@ -12,22 +12,22 @@
         $the_villages = array();
 
         foreach( $villages as $village) {
-            $region_id = get_post_meta( $village->ID, 'region',true)[0];
+            $region_id = (int)get_post_meta( $village->ID, 'region',true)[0];
             $region_name = get_the_title($region_id);
 
-            $district_id = get_post_meta( $village->ID, 'district',true)[0];
+            $district_id = (int)get_post_meta( $village->ID, 'district',true)[0];
             $district_name = get_the_title($district_id);
 
-            $county_id = get_post_meta( $village->ID, 'county',true)[0];
+            $county_id = (int)get_post_meta( $village->ID, 'county',true)[0];
             $county_name = get_the_title($county_id);
 
-            $sub_county_id = get_post_meta( $village->ID, 'sub_county',true)[0];
+            $sub_county_id = (int)get_post_meta( $village->ID, 'sub_county',true)[0];
             $sub_county_name = get_the_title($sub_county_id);
 
-            $parish_id = get_post_meta( $village->ID, 'parish',true);
+            $parish_id = (int)get_post_meta( $village->ID, 'parish',true);
             $parish_name = get_the_title($parish_id);
 
-            $sub_parish_id = get_post_meta( $village->ID, 'sub_parish',true);
+            $sub_parish_id = (int)get_post_meta( $village->ID, 'sub_parish',true);
             $sub_parish_name = get_the_title($sub_parish_id);
 
             $the_villages[] = array(
