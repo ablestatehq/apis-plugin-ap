@@ -38,7 +38,8 @@
     require_once $plugin_dir . "/endpoints/regions.php";
     require_once $plugin_dir . "/endpoints/districts.php";
     require_once $plugin_dir . "/endpoints/villages.php";
-    require_once $plugin_dir . "/endpoints/words.php";
     require_once $plugin_dir . "/endpoints/languages.php";
     require_once $plugin_dir . "/endpoints/tribes.php";
     require_once $plugin_dir . "/endpoints/counties.php";
+    require_once $plugin_dir . "/endpoints/sub-counties.php";
+    require_once $plugin_dir . "/endpoints/words.php";
