@@ -1,10 +1,10 @@
 <?php
     /**
-     * Plugin Name: UG GEO APIS
+     * Plugin Name: Uganda API
      * Description: Access resourceful data from this open api to ease the development of your next project
      * version: 0.0.1
-     * tags: Regions, Districts, Counties, Sub counties, Parish, Sub Parishes, Villages
-     * Plugin URI: https://ugopenapis.com
+     * tags: Regions, Districts, Counties, Sub counties, Parish, Sub Parishes, Villages, words, tourist attractions, tribes, languages
+     * Plugin URI: https://apiaxes.ablestate.co
     */
 
     // Get the path to the plugin directory
@@ -12,7 +12,7 @@
 
     // Modify REST API URL prefix
     function my_rest_url_prefix( $slug ) {
-        return 'api'; // Change 'api' to your desired prefix
+        return 'ug/api'; // Change 'api' to your desired prefix
     }
 
     add_filter( 'rest_url_prefix', 'my_rest_url_prefix' );
@@ -38,3 +38,11 @@
     require_once $plugin_dir . "/endpoints/regions.php";
     require_once $plugin_dir . "/endpoints/districts.php";
     require_once $plugin_dir . "/endpoints/villages.php";
+    require_once $plugin_dir . "/endpoints/languages.php";
+    require_once $plugin_dir . "/endpoints/tribes.php";
+    require_once $plugin_dir . "/endpoints/counties.php";
+    require_once $plugin_dir . "/endpoints/sub-counties.php";
+    require_once $plugin_dir . "/endpoints/parishes.php";
+    require_once $plugin_dir . "/endpoints/sub-parishes.php";
+    require_once $plugin_dir . "/endpoints/words.php";
+    require_once $plugin_dir . "/endpoints/tourist-attractions.php";
